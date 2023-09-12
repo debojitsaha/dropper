@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { updatePositionOnCanvas } from "../../store/features/CanvasSlice";
 import { componentType } from "../../data/buttonMenu";
 import DragLayer from "./DragLayer";
-import { BiMenu } from "react-icons/bi";
 
 const Container = () => {
   const { itemsOnCanvas } = useSelector((state) => state.canvas);
@@ -45,15 +44,6 @@ const Container = () => {
       ref={drop}
       className="w-full h-screen border relative overflow-hidden bg-[#E9EFF2]"
     >
-      <div className="bg-white p-4">
-        <div className="flex gap-3 font-semibold">
-          <BiMenu className="md:text-2xl text-xl" />
-          <p>
-            Design Board
-            <span className="md:text-md sm:text-sm text-gray-400"> (Draft)</span>
-          </p>
-        </div>
-      </div>
       <DragLayer />
       {Object.keys(itemsOnCanvas).length <= 0 ? (
         <div className="w-full h-full flex justify-center items-center text-gray-600 font-medium">
