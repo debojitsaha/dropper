@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { buttonMenu } from "../../data/buttonMenu";
 import { addItemToCanvas } from "../../store/features/CanvasSlice";
 import { BiSearch } from "react-icons/bi";
+import { FiTrash } from "react-icons/fi";
+import { BsChevronDown, BsFillPlayFill } from "react-icons/bs";
 
 const ButtonMenu = () => {
   const dispatch = useDispatch();
@@ -21,7 +23,21 @@ const ButtonMenu = () => {
     dispatch(addItemToCanvas(payload));
   };
   return (
-    <aside className="w-1/5 p-4">
+    <aside className="w-1/5 p-4 bg-[#F9FBFC]">
+      <div className="flex gap-3 items-center justify-end mb-3">
+        <div className="flex gap-4">
+          <div className="flex items-center gap-1">
+            81.2% <BsChevronDown />
+          </div>
+          <button
+            className="flex items-center gap-1 bg-red-500 text-white font-semibold px-4 py-2 rounded-md"
+            onClick={() => dispatch(clearCanvas())}
+          >
+            Clear Canvas
+            <FiTrash size={"18px"} />
+          </button>
+        </div>
+      </div>
       <div className="px-3 py-2 border-2 border-gray-200 rounded-md flex focus-within:border-indigo-600 focus-within:border-2 box-border gap-3">
         <BiSearch className="text-2xl" />
         <input
