@@ -46,8 +46,10 @@ const Container = () => {
     >
       <DragLayer />
       {Object.keys(itemsOnCanvas).length <= 0 ? (
-        <div className="w-full h-full flex justify-center items-center text-gray-600 font-medium">
+        <div className="w-full h-full flex flex-col justify-center items-center text-gray-600 font-medium">
           <h4 className="text-2xl">Click on the components</h4>
+          <h4 className="text-2xl">or</h4>
+          <h4 className="text-2xl">Drag the components on the Canvas</h4>
         </div>
       ) : (
         <div>

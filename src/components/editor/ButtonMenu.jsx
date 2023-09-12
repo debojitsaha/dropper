@@ -5,6 +5,7 @@ import { addItemToCanvas, clearCanvas } from "../../store/features/CanvasSlice";
 import { BiSearch } from "react-icons/bi";
 import { FiTrash } from "react-icons/fi";
 import { BsChevronDown } from "react-icons/bs";
+import snapToGrid from "../../utilities/snapToGrid";
 
 const ButtonMenu = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const ButtonMenu = () => {
     };
 
     if (top && left) {
+      [left, top] = snapToGrid(left, top);
       payload.top = top;
       payload.left = left;
     }
