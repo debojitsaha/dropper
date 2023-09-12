@@ -37,7 +37,7 @@ const ButtonMenu = ({ zoomLevel }) => {
             {zoomLevel} <AiOutlineZoomIn size={"18px"} />
           </div>
           <buttan
-            className="flex items-center gap-1 bg-red-500 text-white font-semibold px-4 py-2 rounded-md"
+            className="flex items-center gap-1 bg-red-500 text-white font-semibold px-4 py-2 rounded-md cursor-pointer"
             onClick={() => dispatch(clearCanvas())}
           >
             Clear Canvas
