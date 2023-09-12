@@ -4,14 +4,14 @@ import { buttonMenu } from "../../data/buttonMenu";
 import { addItemToCanvas, clearCanvas } from "../../store/features/CanvasSlice";
 import { BiSearch } from "react-icons/bi";
 import { FiTrash } from "react-icons/fi";
-import { BsChevronDown, BsFillPlayFill } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 
 const ButtonMenu = () => {
   const dispatch = useDispatch();
 
   const { id } = useSelector((state) => state.canvas);
 
-  const add = (btn) => {
+  const add = (btn, top, left) => {
     const payload = {
       id: id,
       top: 30,
@@ -19,6 +19,11 @@ const ButtonMenu = () => {
       type: btn.type,
       title: btn.title,
     };
+
+    if (top && left) {
+      payload.top = top;
+      payload.left = left;
+    }
 
     dispatch(addItemToCanvas(payload));
   };
@@ -58,6 +63,7 @@ const ButtonMenu = () => {
               >
                 <button
                   onClick={() => add(btn)}
+                  onDragEnd={(e) => add(btn, e.clientY, e.clientX)}
                   className="flex gap-4 text-sm my-8 items-center"
                 >
                   <div className="shadow-2xl bg-white p-2 rounded-md">
