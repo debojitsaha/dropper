@@ -6,11 +6,11 @@ const Dropdown = () => {
     <div className="fixed top-16 w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-pink-300 px-4 py-2 text-sm font-medium text-black">
-            Options
+          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-green-600 text-white font-semibold px-4 py-2 text-sm">
+            Dropdown
           </Menu.Button>
         </div>
-        
+
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"

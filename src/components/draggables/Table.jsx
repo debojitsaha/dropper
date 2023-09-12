@@ -2,8 +2,8 @@ import React from "react";
 
 const Table = () => {
   return (
-    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table className="w-full text-sm text-left bg-slate-300 rounded-md">
+      <thead className="text-xs text-gray-700 uppercase">
         <tr>
           <th scope="col" className="px-6 py-3">
             Product name
@@ -20,10 +20,10 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <tr className="bg-white border-b rounded-md">
           <th
             scope="row"
-            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            className="px-6 py-4 font-medium whitespace-nowrap"
           >
             Apple MacBook Pro 17"
           </th>
@@ -31,10 +31,10 @@ const Table = () => {
           <td className="px-6 py-4">Laptop</td>
           <td className="px-6 py-4">$2999</td>
         </tr>
-        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <tr className="bg-white border-b rounded-md bg-slate-50">
           <th
             scope="row"
-            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            className="px-6 py-4 font-medium whitespace-nowrap"
           >
             Microsoft Surface Pro
           </th>
@@ -42,10 +42,10 @@ const Table = () => {
           <td className="px-6 py-4">Laptop PC</td>
           <td className="px-6 py-4">$1999</td>
         </tr>
-        <tr className="bg-white dark:bg-gray-800">
+        <tr className="bg-white border-b rounded-md">
           <th
             scope="row"
-            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            className="px-6 py-4 font-medium whitespace-nowrap"
           >
             Magic Mouse 2
           </th>
