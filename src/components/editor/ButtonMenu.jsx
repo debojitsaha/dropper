@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { buttonMenu } from "../../data/buttonMenu";
-import { addItemToCanvas } from "../../store/features/CanvasSlice";
+import { addItemToCanvas, clearCanvas } from "../../store/features/CanvasSlice";
 import { BiSearch } from "react-icons/bi";
 import { FiTrash } from "react-icons/fi";
 import { BsChevronDown, BsFillPlayFill } from "react-icons/bs";
@@ -38,7 +38,7 @@ const ButtonMenu = () => {
           </button>
         </div>
       </div>
-      <div className="px-3 py-2 border-2 border-gray-200 rounded-md flex focus-within:border-indigo-600 focus-within:border-2 box-border gap-3">
+      <div className="px-3 py-2 border-2 border-gray-200 rounded-md flex focus-within:border-indigo-600 focus-within:border-2 box-border gap-3 bg-white">
         <BiSearch className="text-2xl" />
         <input
           className="w-3/4 focus:outline-none text-gray-700 text-sm"
@@ -60,11 +60,13 @@ const ButtonMenu = () => {
                   onClick={() => add(btn)}
                   className="flex gap-4 text-sm my-8 items-center"
                 >
-                  <img
-                    className="h-[3rem] w-[3rem] rounded"
-                    src="https://randomuser.me/api/portraits/women/90.jpg"
-                    alt=""
-                  />
+                  <div className="shadow-2xl bg-white p-2 rounded-md">
+                    <img
+                      className="h-[3rem] w-[3rem] rounded"
+                      src={btn.image}
+                      alt={btn.title}
+                    />
+                  </div>
                   <div className="text-left">
                     <p className="font-semibold text-gray-800">{btn.title}</p>
                     <p className="mt-1 text-gray-500">{btn.description}</p>

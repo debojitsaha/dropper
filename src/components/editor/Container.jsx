@@ -43,14 +43,14 @@ const Container = () => {
   return (
     <div
       ref={drop}
-      className="w-full h-full border relative overflow-hidden bg-[#E9EFF2]"
+      className="w-full h-screen border relative overflow-hidden bg-[#E9EFF2]"
     >
       <div className="bg-white p-4">
-        <div className="flex gap-3">
+        <div className="flex gap-3 font-semibold">
           <BiMenu className="md:text-2xl text-xl" />
           <p>
             Design Board
-            <span className="md:text-md sm:text-sm text-gray-400">(Draft)</span>
+            <span className="md:text-md sm:text-sm text-gray-400"> (Draft)</span>
           </p>
         </div>
       </div>
