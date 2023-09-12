@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonMenu from "../components/editor/ButtonMenu";
 import Container from "../components/editor/Container";
 import { BiMenu } from "react-icons/bi";
 
 const Editor = () => {
+  const [zoomLevel, setZoomLevel] = useState(100);
   return (
     <main className="">
       <div className="flex h-screen">
@@ -21,11 +22,11 @@ const Editor = () => {
               </p>
             </div>
           </div>
-          <Container />
+          <Container zoomLevel={zoomLevel} setZoomLevel={setZoomLevel} />
         </div>
 
         {/* list of components */}
-        <ButtonMenu />
+        <ButtonMenu zoomLevel={zoomLevel} />
       </div>
     </main>
   );
