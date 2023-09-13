@@ -56,7 +56,7 @@ const DragLayer = () => {
       <div
         className="absolute inset-0 "
         style={{
-          backgroundSize: "30px 30px",
+          backgroundSize: "25px 25px",
           backgroundImage:
             "linear-gradient(to right, #e3e3e3 1px, transparent 1px), linear-gradient(to bottom, #e3e3e3 1px, transparent 1px)",
         }}
