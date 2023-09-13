@@ -5,7 +5,7 @@
 1. Clone the project into your local machine 🖥️
 
 ```sh
-git clone https://github.com/<Your-GitHub-username>/zenskar-app-builder.git
+git clone https://github.com/<Your-GitHub-username>/zenskar-assignment.git
 ```
 
 3. Navigate the folder 📂
