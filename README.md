@@ -11,7 +11,7 @@ git clone https://github.com/<Your-GitHub-username>/zenskar-assignment.git
 3. Navigate the folder 📂
 
 ```sh
-cd zenskar-assignment
+cd drag-drop-editor
 ```
 
 3. Install the dependencies 📦
